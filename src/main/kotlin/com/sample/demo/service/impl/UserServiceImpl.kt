@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service
 class UserServiceImpl(
     private val userRepository: UserRepository
 ) : UserService {
-
-    override fun getByEmail(email: String): User? {
-        TODO("Not yet implemented")
+    override fun findByEmail(email: String): User? {
+        userRepository.findByEmail(email)
     }
+
 
     override fun createUser(user: User) {
         userRepository.save(user)
