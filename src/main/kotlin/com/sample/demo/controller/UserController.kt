@@ -46,12 +46,14 @@ class UserController(
 
         try {
             val user = userService.findByEmail(email)
+            val errorResponse = "Error Page"
 
             if (user != null) {
                 if (inputPasswdHash.equals(user.passwd)) {
                     session.setAttribute("email", user.email)
                     model["title"] = "Welcome to Demo Project"
                     model["name"] = user.name
+                    model["email"] = user.email
 
                     return "welcome"
                 } else {
@@ -67,6 +69,31 @@ class UserController(
             model["title"] = "Error"
             return "error"
         }
+    }
+
+    @PostMapping("/update/name")
+    fun updateName(model: Model,
+                   @RequestParam("id", required = true) email: String,
+                   @RequestParam("name", required = true) name: String
+    ): String {
+        userService.updateName(email, name)
+
+        model["title"] = "Welcome to Demo Project"
+        model["name"] = name
+        model["email"] = email
+
+        return "welcome"
+    }
+
+    @PostMapping("/remove")
+    fun remove(model: Model,
+               @RequestParam("id", required = true) email: String,
+               @RequestParam("passwd", required = true) passwd: String
+    ): String {
+        val result = userService.deleteUser(email, passwd)
+        model["title"] = result
+
+        return result
     }
 
 }

@@ -18,5 +18,7 @@ class User(
         @Column(name = "passwd")
         var passwd: String = ""
 ) {
-
+        fun updateUserName(name: String) {
+                this.name = name
+        }
 }

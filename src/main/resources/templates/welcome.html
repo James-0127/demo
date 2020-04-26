@@ -1,0 +1,28 @@
+{{> header}}
+
+<h1>{{name}}, Welcome</h1>
+
+<hr>
+
+<form action="/user/update/name" method="post">
+    <h2>Update Account Name</h2>
+    Original name:{{name}}<br>
+    <br>
+    Change name
+    <input type="text" name="name">
+    <input type="hidden" name="id" value="{{email}}">
+    <input type="submit" value="submit">
+</form>
+
+<hr>
+
+<form action="/user/remove" method="post">
+    <h2>Account Termination</h2>
+    <input type="hidden" name="id" value="{{email}}">
+    Password: <input type="password" name="passwd">
+    <br>
+    <input type="submit" value="submit">
+</form>
+
+
+{{> footer}}
