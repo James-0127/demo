@@ -1,0 +1,33 @@
+common:
+  meta:
+    charset: UTF-8
+    viewport: width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi
+view:
+  header:
+    title: Header!!
+    meta:
+      title: 운세7 - Header
+      description: 헤더입니다.
+      keyword: 헤더 - 사주, 궁합, 운세, 신점, 역학, 타로, 사주팔자, 운세상담전화...
+      property:
+        url: http://m.unse7.com
+        title: 운세7 - 국내 최대 전화운세상담
+        desciption: 국내 최대 전화운세상담 서비스 운세7은 사주, 궁합, 운세, 신점, 역학, 타로 등 전문분야별 선생님을 만날 수 있는 2,500만 방문자가 선택한 대한민국 No.1 전화운세상담 서비스입니다.
+        stiename: 운세7 - 국내 최대 전화운세상담 서비스
+        image: https://unse7-renew.s3.ap-northeast-2.amazonaws.com/static/mobile/images/meta/og_img_unse7.png
+        type: website
+  footer:
+    title: Footer!!
+    meta:
+      charset: UTF-8
+      viewport: width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi
+      title: 운세7 - Footer
+      description: 푸터입니다.
+      keyword: 헤더 - 사주, 궁합, 운세, 신점, 역학, 타로, 사주팔자, 운세상담전화...
+      property:
+        url: http://m.unse7.com
+        title: 운세7 - 국내 최대 전화운세상담
+        desciption: 국내 최대 전화운세상담 서비스 운세7은 사주, 궁합, 운세, 신점, 역학, 타로 등 전문분야별 선생님을 만날 수 있는 2,500만 방문자가 선택한 대한민국 No.1 전화운세상담 서비스입니다.
+        stiename: 운세7 - 국내 최대 전화운세상담 서비스
+        image: https://unse7-renew.s3.ap-northeast-2.amazonaws.com/static/mobile/images/meta/og_img_unse7.png
+        type: website

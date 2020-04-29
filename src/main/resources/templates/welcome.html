@@ -1,28 +1,65 @@
-{{> header}}
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<th:block th:include="head"></th:block>
+<th:block th:include="nav"></th:block>
 
-<h1>{{name}}, Welcome</h1>
+<head>
+    <script type="text/javascript" src="/asset/js/demo.js"></script>
 
-<hr>
+    <style>
+        aside {
+            border: 1px solid #000000;
+            margin: 5px auto;
+            padding: 5px
+        }
 
-<form action="/user/update/name" method="post">
-    <h2>Update Account Name</h2>
-    Original name:{{name}}<br>
-    <br>
-    Change name
-    <input type="text" name="name">
-    <input type="hidden" name="id" value="{{email}}">
-    <input type="submit" value="submit">
-</form>
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 
-<hr>
+<body>
+<section>
+    <article>
+        <h1 id="titleName"><span th:text="${name}"></span><span>, Welocme</span></h1>
+    </article>
 
-<form action="/user/remove" method="post">
-    <h2>Account Termination</h2>
-    <input type="hidden" name="id" value="{{email}}">
-    Password: <input type="password" name="passwd">
-    <br>
-    <input type="submit" value="submit">
-</form>
+    <aside>
+        <div id="updateNameDiv">
+            <h2>Update User Name</h2>
+            <input type="hidden" id="hiddenEmail" name="email"  th:value="${email}">
+            <label><b>Update Name:</b>
+                <input name="name" id="updateName" type="text">
+            </label>
+            <br>
+            <br>
+            <button class="button" id="updateNameBtn" onclick="updateName()" >Send</button>
+        </div>
+    </aside>
 
+    <aside>
+        <div id="deleteUserDiv">
+            <h2>Account Termination</h2>
+            <input type="hidden" name="email" th:value="${email}">
+            <label><b>Password:</b>
+                <input type="password" name="passwd">
+            </label>
+            <br>
+            <br>
+            <button class="button" id="deleteUserBtn" onclick="deleteUser()" >Send</button>
+        </div>
+    </aside>
+</section>
 
-{{> footer}}
+<th:block th:include="footer"></th:block>
+</body>
+</html>

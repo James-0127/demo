@@ -1,0 +1,25 @@
+server:
+  address: 0.0.0.0
+  port: 8080
+  servlet:
+    session:
+      timeout: 3600
+
+spring:
+  thymeleaf:
+    prefix: classpath:templates/
+    check-template-location: true
+    suffix: .html
+    mode: HTML5
+    cache: false
+    template-resolver-order: 0
+
+  datasource:
+    name: demo
+    initialization-mode: never
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/demo;
+
+  jpa:
+    hibernate:
+      ddl-auto: update

@@ -1,13 +1,26 @@
-{{> header}}
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<th:block th:include="head"></th:block>
+<th:block th:include="nav"></th:block>
 
-<h1>Sign In</h1>
-<form action="/user/signin" method="post">
-    id:<br>
-    <input type="text" name="email">
-    <br>
-    password: <br>
-    <input type="text" name="password">
-    <input type="submit" value="submit">
-</form>
+<body>
+<section>
+    <article>
+        <h1>Sign IN</h1>
+    </article>
 
-{{> footer}}
+    <aside>
+        <form action="/user/signin" method="post">
+            id:<br>
+            <input type="text" name="id">
+            <br>
+            password: <br>
+            <input type="text" name="passwd">
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </aside>
+</section>
+
+<th:block th:include="footer"></th:block>
+</body>
+</html>

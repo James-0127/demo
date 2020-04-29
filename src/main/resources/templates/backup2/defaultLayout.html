@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title layout:title-pattern="$LAYOUT_TITLE : $CONTENT_TITLE">Eblo</title>
+
+    <!-- 공통 css, js, meta tag -->
+    <th:block th:replace="head"></th:block>
+</head>
+
+
+<body>
+<!-- 공통 header -->
+<header th:replace="header :: commonHeader"></header>
+
+<nav th:replace="nav :: commonNav"></nav>
+
+<th:block layout:fragment="content"></th:block>
+
+<!-- 공통 footer -->
+<footer th:replace="footer :: commonFooter"></footer>
+
+</body>
+
+</html>

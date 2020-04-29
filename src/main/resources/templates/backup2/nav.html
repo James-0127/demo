@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <nav th:fragment="commonNav">
+        <div class="w3-bar w3-light-grey">
+            <a href="/" class="w3-bar-item w3-button">Home</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button">User</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/sign/up" class="w3-bar-item w3-button">Sign UP</a>
+                    <a href="/sign/in" class="w3-bar-item w3-button">Sign IN</a>
+                    <a href="#" class="w3-bar-item w3-button">Sign OUT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

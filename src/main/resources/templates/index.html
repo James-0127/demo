@@ -1,9 +1,39 @@
-{{> header}}
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default_layout">
 
-<h1>Index Page입니다.</h1>
+<!--<th:block layout:fragment="defaultHead">-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Index Title</title>-->
+<!--    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>-->
+<!--</th:block>-->
 
-<a href="/sign/up"><h2>sign up</h2></a>
-<br>
-<a href="/sign/in"><h2>sign in</h2></a>
+<!--<th:block layout:fragment="add_lib_css">-->
+<!--    <link rel="stylesheet" th:href="@{/lib/fullcalendar-3.6.2/fullcalendar.min.css}" />-->
+<!--    <link rel="stylesheet" th:href="@{/lib/fullcalendar-3.6.2/fullcalendar.print.min.css}" media="print" />-->
+<!--</th:block>-->
 
-{{> footer}}
+<!--<th:block layout:fragment="custom_css">-->
+<!--    <link rel="stylesheet" th:href="@{/css/dashboard/main.css}" />-->
+<!--</th:block>-->
+
+<th:block layout:fragment="contentFragment">
+    <div class="content-wrapper">
+        <section layout:fragment="content">
+            <article>
+                <h1>Index Page입니다.</h1>
+            </article>
+        </section>
+    </div>
+</th:block>
+
+<!--<th:block layout:fragment="custom_js">-->
+<!--    <script th:src="@{/lib/fullcalendar-3.6.2/fullcalendar.min.js}"></script>-->
+<!--    <script th:src="@{/js/dashboard/main.js}"></script>-->
+<!--</th:block>-->
+
+
+</html>
